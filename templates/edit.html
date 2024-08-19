@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>To Do List</h1>
+        <table>
+            <tbody>
+                {% for data in database %}
+                {% if loop.index0 == index %}
+                <tr>
+                    <form action="{{ url_for('edit', index=index) }}" method="post">
+                        <td colspan="4">
+                            <input type="text" name="name" placeholder="Edit task..." value="{{ task }}" required>
+                            <button type="submit">submit</button>
+                        </td>
+                    </form>
+                </tr>
+                {% else %}
+                <tr>
+                    <td>
+                        <form action="{{ url_for('check', index=loop.index0) }}" method="post">
+                            <input type="checkbox" name="done" {% if data.done %} checked {% endif %}
+                                onchange="this.form.submit()" />
+                        </form>
+                    </td>
+                    <td>{{ data["task"] }}</td>
+                    <td>
+                        <a href="{{ url_for('edit', index=loop.index0) }}" class="edit">Edit</a>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('delete', index=loop.index0) }}" class="delete">Delete</a>
+                    </td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
