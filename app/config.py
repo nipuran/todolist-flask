@@ -21,4 +21,3 @@ class Config:
     SESSION_TYPE = os.environ.get('SESSION_TYPE', 'filesystem')
     SESSION_PERMANENT = os.environ.get('SESSION_PERMANENT', 'True').lower() in ('true', 'on', 'yes')
     PERMANENT_SESSION_LIFETIME = timedelta(minutes=int(os.environ.get('SESSION_LIFETIME_MINUTES', 5)))
-    SESSION_FILE_DIR = os.environ.get('SESSION_FILE_DIR', '/tmp/flask_session')
