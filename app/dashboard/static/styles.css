@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: #7695FF;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+/* navbar */
+nav {
+  background-color: #7695FF;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav ul li {
+  color: white;
+}
+
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-container {
+  min-width: 300px;
+}
+
+.add-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.input {
+  flex-grow: 1;
+}
+
+.submit {
+  width: 75px;
+}
+
+.table-container {
+  min-width: 300px;
+}
+
+.table-row {
+  display: flex;
+  gap: 5px;
+}
+
+.table-row:hover {
+  background-color: #9DBDFF;
+  color: white;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4 {
+  padding: 8px;
+}
+
+.col-1,
+.col-3,
+.col-4 {
+  width: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.col-2 {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}

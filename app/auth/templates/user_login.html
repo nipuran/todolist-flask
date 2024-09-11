@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="auth_static/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="{{ url_for('auth_bp.user_login') }}" method="post">
+            {{ form.csrf_token }}
+            <label style="color: white">{{ form.username.label }}</label>
+            {{ form.username(class="input-field") }}
+            <label style="color: white">{{ form.password.label }}</label>
+            {{ form.password(class="input-field") }}
+            {{ form.login(class="button") }}
+        </form>
+        <a href="{{ url_for('auth_bp.forget_password') }}" class="link">Forgot Password?</a>
+    </div>
+</body>
+
+</html>

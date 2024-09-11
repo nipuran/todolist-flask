@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP</title>
+    <link rel="stylesheet" href="auth_static/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Verify OTP</h1>
+        <form action="{{ url_for('auth_bp.verify_otp') }}" method="post">
+            {{ form.csrf_token }}
+            <label style="color: white">{{ form.otp.label }}</label>
+            {{ form.otp(class="input-field") }}
+            {{ form.verify(class="button") }}
+        </form>
+    </div>
+</body>
+
+</html>
