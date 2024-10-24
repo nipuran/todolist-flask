@@ -1,45 +1,66 @@
-# todolist-flask
+# To-Do List
 
-A simple to-do list application built with Flask. This app demonstrates basic CRUD (Create, Read, Update, Delete) operations.
+## Project Overview
+A simple to-do list application built with Flask, demonstrating basic CRUD (Create, Read, Update, Delete) operations. This application provides a user-friendly interface for managing tasks effectively.
+### Features
+- **User Authentication**: 
+  - Secure login, registration, password reset, and OTP verification processes.
+- **To-Do List Management**: 
+  - An interactive dashboard interface that allows users to create, edit, and delete tasks seamlessly.
 
-## Features
+## Table of Contents
+- [Installation Guide](#installation-guide)
+- [Deployed App](#deployed-app)
+- [Code Structure](#code-structure)
 
-- **User Authentication**: Includes login, registration, password reset, and OTP verification.
-- **To-Do List**: A dashboard interface that allows users to manage a to-do list, with functionalities for creating, editing, and deleting tasks.
-
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.x
-- Flask and related dependencies (see `requirements.txt`)
-
-
-### Installation
-
-1. Clone the repository:
+## Installation Guide
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/nipuran/todolist-flask.git
+```
+### 2. Navigate to the Project Directory
+```bash
 cd todolist-flask
 ```
-2. Install dependencies:
+### 3. Create a Virtual Environment
+```bash
+python -m virtualenv .venv
+```
+### 4. Activate the Virtual Environment
+- **Windows**:
+  ```bash
+  .venv\Scripts\activate
+  ```
+- **macOS/Linux**:
+  ```bash
+  source .venv/bin/activate
+  ```
+### 5. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
-3. Set up environment variables (e.g., secret keys, database URI).
-4. Run the application:
+> **Note:** The `requirements.txt` file includes the following packages:
+> - [Flask](https://pypi.org/project/Flask/)
+> - [Flask-WTF](https://pypi.org/project/Flask-WTF/)
+> - [Flask-SQLAlchemy](https://pypi.org/project/Flask-SQLAlchemy/)
+> - [Flask-Session](https://pypi.org/project/Flask-Session/)
+> - [Flask-Bcrypt](https://pypi.org/project/Flask-Bcrypt/)
+> - [Flask-Login](https://pypi.org/project/Flask-Login/)
+> - [Flask-Mail](https://pypi.org/project/Flask-Mail/)
+### 6. Run the App Locally
+To start the Flask app, execute the following command in your terminal:
 ```bash
 python run.py
 ```
 
+## Deployed App
+The [To-Do List app](https://todolist-flask-tqrw.onrender.com/) is deployed to showcase the application interactively.
+### Preview
+<img src='preview-flask-app.jpeg' alt='App Preview'>
 
 ## Code Structure
-
-
 ```
 todolist-flask/
-.
 ├── README.md
 ├── app
 │   ├── __init__.py
